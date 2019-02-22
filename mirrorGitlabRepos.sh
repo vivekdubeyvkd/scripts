@@ -14,14 +14,15 @@ do
  test -d repo_dir && rm -rf repo_dir
  
  # Gitlab api to create a project on Gitlab named ${repoName} inside appropriate group
- curl --header "PRIVATE-TOKEN: ${gitlab_token}" -H "Content-Type: application/json" -d '{"name”:”<name of repo>","namespace_id”:<gitlab_group_id>}' -X POST "<gitlabUrl>/api/v4/projects"
+ curl --header "PRIVATE-TOKEN: ${gitlab_token}" -H "Content-Type: application/json" -d "{"name”:\”${repoName}\","namespace_id”:<gitlab_group_id>}" -X POST "<gitlabUrl>/api/v4/projects"
 
  git clone --bare ${repoUrl} repo_dir
  cd repo_dir
  git push --mirror <gitlab_url>:<gitlab_group_name>/${repoName}.git
  cd ..
   
- echo "++++++ archiving project ${repoName} ++++++++"
- curl -s -k --request POST --header "PRIVATE-TOKEN: $gitlab_token" "<gitlab_url>/api/v4/projects/${projectId}/archive"
+ # if you want to archive existing projects , then enable below code and disable above code from line 19 till 22
+ #echo "++++++ archiving project ${repoName} ++++++++"
+ #curl -s -k --request POST --header "PRIVATE-TOKEN: $gitlab_token" "<gitlab_url>/api/v4/projects/${projectId}/archive"
  
 done
