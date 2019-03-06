@@ -9,4 +9,4 @@ function remoteFunction() {
     echo $value
 }
 
-ssh "${remote_user}"@"${remote_server}" "$(typeset -f remoteFunction hello);cleanUp hello"
+ssh "${remote_user}"@"${remote_server}" "$(typeset -f remoteFunction hello);remoteFunction hello"
