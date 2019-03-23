@@ -15,3 +15,6 @@ do
   touch ${i}.${filePrefix}
   n=`expr $n + 1`
 done
+
+# just using touch and sequence
+touch {1..100}${filePrefix}
