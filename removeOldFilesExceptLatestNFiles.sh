@@ -17,7 +17,7 @@ function removeOldFilesExceptLatestNFiles(){
     then
         fileToBeRemoved=$((${totalMatchingFileCount} - ${keepLatestNFiles}))
         echo "Files to be removed : ${fileToBeRemoved}" 
-        ls -lrt ${rootCleanupDir}/*${fileExtensionToBeCleanedUp} | awk '{print $NF}' | while read line
+        ls -lrt ${rootCleanupDir}/*${fileExtensionToBeCleanedUp} | head -${fileToBeRemoved} | awk '{print $NF}' | while read line
         do
             echo "removing ${line}"
             rm -rf $line
