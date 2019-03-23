@@ -20,6 +20,7 @@ function removeOldFilesExceptLatestNFiles(){
         ls -lrt ${rootCleanupDir}/*${fileExtensionToBeCleanedUp} | head -${fileToBeRemoved} | awk '{print $NF}' | while read line
         do
             echo "removing ${line}"
+            # on first run please comment the below "rm -rf $line" command and see the files to be removed in the output , if you are satisfied with that, then only uncomment the "rm -rf $line" command
             rm -rf $line
         done 
     else
