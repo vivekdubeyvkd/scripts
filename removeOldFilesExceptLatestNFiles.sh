@@ -19,7 +19,8 @@ function removeOldFilesExceptLatestNFiles(){
         echo "Files to be removed : ${fileToBeRemoved}" 
         ls -lrt ${rootCleanupDir}/*${fileExtensionToBeCleanedUp} | awk '{print $NF}' | while read line
         do
-            echo $line
+            echo "removing ${line}"
+            rm -rf $line
         done 
     else
         echo "Files to be removed : ${fileToBeRemoved}" 
