@@ -17,4 +17,5 @@ do
 done
 
 # just using touch and loop sequence
+# GNU bash, version 4.3.46
 touch {1..100}${filePrefix}
