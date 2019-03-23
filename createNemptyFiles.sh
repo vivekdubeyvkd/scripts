@@ -16,5 +16,5 @@ do
   n=`expr $n + 1`
 done
 
-# just using touch and sequence
+# just using touch and loop sequence
 touch {1..100}${filePrefix}
