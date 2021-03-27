@@ -1,5 +1,5 @@
 #!/bin/bash
-# Author: Vivek Dubey(vivekdubeyvkd@gmail.com)
+# Author: Vivek Dubey
 # to be run as root
 # can install Git , Maven , Java , Tomcat and Jenkins
 # needs the URL to download tools in .tar.gz format to complete the installation
