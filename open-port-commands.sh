@@ -2,8 +2,9 @@
 # 55555 is port to be opened
 # reference https://www.thegeekdiary.com/how-to-open-a-ports-in-centos-rhel-7/
 
-# firewall-cmd --zone=public --add-port=55555/tcp --permanent
-success
+# update config for new port to be opened
+firewall-cmd --zone=public --add-port=55555/tcp --permanent
 
-# firewall-cmd --reload
-success
+# reload new config
+firewall-cmd --reload
+
