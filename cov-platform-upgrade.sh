@@ -1,7 +1,7 @@
 # reference : https://community.synopsys.com/servlet/fileField?entityId=kaC2H000000kBAOUA2&field=Attachment__Body__s
 
 ##########################################################################################################
-COV_PLATFORM_TARGET_INSTALLER_LOCATION='${mydir}/cov-platform-linux64-2021.12.2.sh'
+COV_PLATFORM_TARGET_INSTALLER_LOCATION="${mydir}/cov-platform-linux64-2021.12.2.sh"
 EXISTING_COV_PLATFORM_INSTALLATION="${mydir}/existing-cov-installation-dir"
 UPGRADE_COV_PLATFORM_INSTALLATION="${mydir}/upgrade-cov-installation-dir"
 TEMP_BACKUP_LOCATION="${mydir}/backup-upgrade-prep"
